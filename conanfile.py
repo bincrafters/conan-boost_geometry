@@ -13,7 +13,7 @@ class BoostGeometryConan(ConanFile):
                       "Boost.Assert/1.64.0@bincrafters/testing", \
                       "Boost.Concept_Check/1.64.0@bincrafters/testing", \
                       "Boost.Config/1.64.0@bincrafters/testing", \
-                      "Boost.Containere/1.64.0@bincrafters/testing", \
+                      "Boost.Container/1.64.0@bincrafters/testing", \
                       "Boost.Core/1.64.0@bincrafters/testing", \
                       "Boost.Function_Types/1.64.0@bincrafters/testing", \
                       "Boost.Fusion/1.64.0@bincrafters/testing", \
