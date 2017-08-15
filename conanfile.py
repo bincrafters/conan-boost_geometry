@@ -7,7 +7,7 @@ class BoostGeometryConan(ConanFile):
     source_url = "https://github.com/boostorg/geometry"
     description = "Please visit http://www.boost.org/doc/libs/1_64_0/libs/libraries.htm"
     license = "www.boost.org/users/license.html"
-    lib_short_name = "geometry"
+    lib_short_names = ["geometry"]
     requires =  "Boost.Algorithm/1.64.0@bincrafters/testing", \
                       "Boost.Array/1.64.0@bincrafters/testing", \
                       "Boost.Assert/1.64.0@bincrafters/testing", \
@@ -42,12 +42,14 @@ class BoostGeometryConan(ConanFile):
                       #algorithm9 array3 assert1 concept_check5 config0 container7 core2 function_types5 fusion5 integer3 iterator5 lexical_cast8 math8 move3 mpl5 multiprecision10 numeric~conversion6 polygon6 qvm6 range7 rational6 serialization11 smart_ptr4 static_assert1 throw_exception2 tokenizer6 tuple4 type_traits3 utility5 variant9
                       
     def source(self):
-        self.run("git clone --depth=50 --branch=boost-{0} {1}.git"
-                 .format(self.version, self.source_url))
+        for lib_short_name in self.lib_short_names:
+            self.run("git clone --depth=50 --branch=boost-{0} https://github.com/boostorg/{1}.git"
+                     .format(self.version, lib_short_name)) 
 
     def package(self):
-        include_dir = os.path.join(self.build_folder, self.lib_short_name, "include")
-        self.copy(pattern="*", dst="include", src=include_dir)
+        for lib_short_name in self.lib_short_names:
+            include_dir = os.path.join(lib_short_name, "include")
+            self.copy(pattern="*", dst="include", src=include_dir)		
 
     def package_id(self):
         self.info.header_only()
