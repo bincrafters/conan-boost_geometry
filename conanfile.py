@@ -7,7 +7,7 @@ from conans import ConanFile, tools
 class BoostGeometryConan(ConanFile):
     name = "boost_geometry"
     version = "1.66.0"
-    url = "https://github.com/bincrafters/conan-boost-geometry"
+    url = "https://github.com/bincrafters/conan-boost_geometry"
 
     lib_short_names = ["geometry"]
     is_header_only = True
