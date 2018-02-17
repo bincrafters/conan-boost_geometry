@@ -17,37 +17,37 @@ class BoostGeometryConan(ConanFile):
         self.info.header_only()
 
     requires = (
-        "boost_package_tools/1.65.1@bincrafters/testing",
-        "boost_algorithm/1.65.1@bincrafters/testing",
-        "boost_array/1.65.1@bincrafters/testing",
-        "boost_assert/1.65.1@bincrafters/testing",
-        "boost_concept_check/1.65.1@bincrafters/testing",
-        "boost_config/1.65.1@bincrafters/testing",
-        "boost_container/1.65.1@bincrafters/testing",
-        "boost_core/1.65.1@bincrafters/testing",
-        "boost_function_types/1.65.1@bincrafters/testing",
-        "boost_fusion/1.65.1@bincrafters/testing",
-        "boost_integer/1.65.1@bincrafters/testing",
-        "boost_iterator/1.65.1@bincrafters/testing",
-        "boost_lexical_cast/1.65.1@bincrafters/testing",
-        "boost_math/1.65.1@bincrafters/testing",
-        "boost_move/1.65.1@bincrafters/testing",
-        "boost_mpl/1.65.1@bincrafters/testing",
-        "boost_multiprecision/1.65.1@bincrafters/testing",
-        "boost_numeric_conversion/1.65.1@bincrafters/testing",
-        "boost_polygon/1.65.1@bincrafters/testing",
-        "boost_qvm/1.65.1@bincrafters/testing",
-        "boost_range/1.65.1@bincrafters/testing",
-        "boost_rational/1.65.1@bincrafters/testing",
-        "boost_serialization/1.65.1@bincrafters/testing",
-        "boost_smart_ptr/1.65.1@bincrafters/testing",
-        "boost_static_assert/1.65.1@bincrafters/testing",
-        "boost_throw_exception/1.65.1@bincrafters/testing",
-        "boost_tokenizer/1.65.1@bincrafters/testing",
-        "boost_tuple/1.65.1@bincrafters/testing",
-        "boost_type_traits/1.65.1@bincrafters/testing",
-        "boost_utility/1.65.1@bincrafters/testing",
-        "boost_variant/1.65.1@bincrafters/testing"
+        "boost_package_tools/1.65.1@bincrafters/stable",
+        "boost_algorithm/1.65.1@bincrafters/stable",
+        "boost_array/1.65.1@bincrafters/stable",
+        "boost_assert/1.65.1@bincrafters/stable",
+        "boost_concept_check/1.65.1@bincrafters/stable",
+        "boost_config/1.65.1@bincrafters/stable",
+        "boost_container/1.65.1@bincrafters/stable",
+        "boost_core/1.65.1@bincrafters/stable",
+        "boost_function_types/1.65.1@bincrafters/stable",
+        "boost_fusion/1.65.1@bincrafters/stable",
+        "boost_integer/1.65.1@bincrafters/stable",
+        "boost_iterator/1.65.1@bincrafters/stable",
+        "boost_lexical_cast/1.65.1@bincrafters/stable",
+        "boost_math/1.65.1@bincrafters/stable",
+        "boost_move/1.65.1@bincrafters/stable",
+        "boost_mpl/1.65.1@bincrafters/stable",
+        "boost_multiprecision/1.65.1@bincrafters/stable",
+        "boost_numeric_conversion/1.65.1@bincrafters/stable",
+        "boost_polygon/1.65.1@bincrafters/stable",
+        "boost_qvm/1.65.1@bincrafters/stable",
+        "boost_range/1.65.1@bincrafters/stable",
+        "boost_rational/1.65.1@bincrafters/stable",
+        "boost_serialization/1.65.1@bincrafters/stable",
+        "boost_smart_ptr/1.65.1@bincrafters/stable",
+        "boost_static_assert/1.65.1@bincrafters/stable",
+        "boost_throw_exception/1.65.1@bincrafters/stable",
+        "boost_tokenizer/1.65.1@bincrafters/stable",
+        "boost_tuple/1.65.1@bincrafters/stable",
+        "boost_type_traits/1.65.1@bincrafters/stable",
+        "boost_utility/1.65.1@bincrafters/stable",
+        "boost_variant/1.65.1@bincrafters/stable"
     )
 
     # BEGIN
@@ -55,7 +55,7 @@ class BoostGeometryConan(ConanFile):
     description = "Please visit http://www.boost.org/doc/libs/1_65_1"
     license = "BSL-1.0"
     short_paths = True
-    build_requires = "boost_generator/1.65.1@bincrafters/testing"
+    build_requires = "boost_generator/1.65.1@bincrafters/stable"
 
     def package_id(self):
         getattr(self, "package_id_additional", lambda:None)()
