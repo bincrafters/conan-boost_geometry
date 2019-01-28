@@ -8,6 +8,7 @@ base = python_requires("boost_base/1.68.0@bincrafters/stable")
 
 class BoostGeometryConan(base.BoostBaseConan):
     name = "boost_geometry"
+    version = "1.68.0"
     url = "https://github.com/bincrafters/conan-boost_geometry"
     lib_short_names = ["geometry"]
     header_only_libs = ["geometry"]
